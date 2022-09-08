@@ -1,59 +1,83 @@
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const fs = require('fs');
 
-const promptUser = () => {
+const questions = [
+    'What is the title of project? ',
+    'Enter a short description: ',
+    'Enter the installation instructions: ',
+    'Enter the usage information: ',
+    'Enter the contribution guidelines: ',
+    'Enter the test instructions: ',
+    'Enter your E-Mail Address: ',
+    'Enter your GitHub username: ',
+    'Choose a license: '
+
+];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, 'utf-8', (err) => {
+        err ? console.log(err) : console.log('Your data has been successful input the generate!')
+    })
+}
+
+const init = () => {
     return inquirer.prompt ( [
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of project? '
+            message: questions[0],
         },
         {
             type: 'input',
             name: 'description',
-            message: 'Enter a short description: '
+            message: questions[1],
         },
         {
             type: 'input',
             name: 'instruction',
-            message: 'Enter the installation instructions: '
+            message: questions[2],
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Enter the usage information: '
+            message: questions[3],
         },
         {
             type: 'input',
             name: 'contribution',
-            message: 'Enter the contribution guidelines: '
+            message: questions[4],
         },
         {
             type: 'input',
             name: 'test',
-            message: 'Enter the test instructions: '
+            message: questions[5],
         },
         {
             type: 'input',
             name: 'email',
-            message: 'Enter your E-Mail address: '
+            message: questions[6],
         },
         {
             type: 'input',
             name: 'github',
-            message: 'Enter your GitHub username: '
+            message: questions[7],
         },
         {
             type: 'list',
             name: 'license',
-            Message: 'Choose a license: ',
-            choices: ['MIT', 'GPLv3', 'Apache'],
+            Message: questions[8],
+            choices: ['MIT', 'GPL v3', 'Apache'],
             default: 'MIT'
         }
 
     ])
+    .then(data => {
+        console.log(data);
+        const markdown = generateMarkdown(data);
+        writeToFile('./assets/testREADME.md', markdown)
+    })
 };
 
-promptUser ()
-.then(answers => {
-    console.log(answers);
-});
+init ();
