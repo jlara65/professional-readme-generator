@@ -1,9 +1,9 @@
-# Readme Generator
+# RoboCop Project
   
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Description 
-  Readme Generator
+  RoboCop Project
   
   ## Table of Contents
   * [Description](#Description)
@@ -14,15 +14,15 @@
   * [Questions](#Questions)
   * [License](#License)
   ## Installation
-  Required to install the node.js
+  Install the ``` node ```
   ## Usage
-  It will take some time to generate your readme under a second
+  ``` npm i inquirer@8.2.4 ```
   ## License
-  This Project is licensed under the GPLv3 license.
-  ##Contributing
-  You can look at google.com for that
+  This Project is licensed under the MIT license.
+  ## Contributing
+  To create something that output stuff
   ## Tests
-  output with the testReadme.md file
+  RoboCop is assigned to Metro West and hailed by the media for his brutally efficient campaign against crime. Lewis suspects he is Murphy, recognizing the unique way he holsters his gun, a trick Murphy learned to impress his son. During maintenance, RoboCop experiences a nightmare of Murphy's death. He leaves the station and encounters Lewis, who addresses him as Murphy. While on patrol, RoboCop arrests Emil, who recognizes Murphy's mannerisms, furthering RoboCop's recall. RoboCop then uses the police database to identify Emil's associates and review Murphy's police record. RoboCop recalls further memories while exploring Murphy's former home, his wife and son having moved away following his death. Elsewhere, Jones gets Boddicker to murder Morton, in revenge for Morton's attempting to usurp his position at OCP
   ## Questions
-  If you have any questions, please feel free to send me an email at JohnDoe@domain.com, or contact me on [GitHub](https://github.com/jlara65)
+  If you have any questions, please feel free to send me an email at username@domain.com, or contact me on [GitHub](https://github.com/jlara65)
   

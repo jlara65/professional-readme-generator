@@ -9,7 +9,7 @@ const renderLicenseLink = (data) => {
   let youLicense = ''
   if (licenseType === 'MIT') {
     youLicense = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-  } else if (licenseType === 'GPLv3') {
+  } else if (licenseType === 'GPL v3') {
     youLicense = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
   } else {
     youLicense = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
