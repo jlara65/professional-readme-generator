@@ -19,12 +19,12 @@ npm i inquirer@8.2.4
 ```
 
 ## Usage
---> [Walkthrough Video](www.google.com) <--
+--> [Walkthrough Video](https://watch.screencastify.com/v/TaqNLbtUBKHwdaYD9yr6) <--
 
 1. Run `node index` in terminal
 2. Follow the prompts 
 3. A file name `SampleReadMe.md` will be generated in utils folder
-![Screenshot](./assets/images/FakeScreenshot.png)
+![Screenshot](./assets/images/SampleReadmeScreenCapture.png)
 
 ## Contributing 
 

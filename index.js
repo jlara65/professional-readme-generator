@@ -2,9 +2,10 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
 
+// Questions array
 const questions = [
-    'What is the title of project? ',
-    'Enter a short description: ',
+    'What is the title of project? (Required) ',
+    'Enter a short description (Required): ',
     'Enter the installation instructions: ',
     'Enter the usage information: ',
     'Enter the contribution guidelines: ',
@@ -22,17 +23,34 @@ function writeToFile(fileName, data) {
     })
 }
 
+// arrow function for inquirer prompt
 const init = () => {
     return inquirer.prompt ( [
         {
             type: 'input',
             name: 'title',
             message: questions[0],
+            validate: titleInput => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the title of your project!');
+                return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'description',
             message: questions[1],
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the short description of project!');
+                return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -76,8 +94,9 @@ const init = () => {
     .then(data => {
         console.log(data);
         const markdown = generateMarkdown(data);
-        writeToFile('./assets/testREADME.md', markdown)
+        writeToFile('./utils/SampleREADMe.md', markdown)
     })
 };
 
+// call the inquirer prompt function
 init ();
